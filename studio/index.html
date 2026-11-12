@@ -15,9 +15,9 @@
 <style>
 :root{--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;--brass:#b8914f;--brass-lt:#e8cf98;
   --bg:#f6f0e6;--bg2:#efe6d8;--text:#22170f;--muted:#6b5646;--line:rgba(120,85,50,.2);--card:#fbf7f0;--top1:#a56f42;--front1:#5c3a21;
-  --logo-op:.13;--logo-blend:multiply;--logo-filter:none}
+  --logo-op:.13;--logo-blend:multiply;--logo-filter:none;--beam:.9;--dark:0}
 body.night{--bg:#100c0a;--bg2:#17110e;--text:#f2e8da;--muted:#b3a08c;--line:rgba(201,162,101,.2);--card:#1b1411;--top1:#5c3b22;--front1:#2c1b0f;--brass:#c9a265;
-  --logo-op:.11;--logo-blend:screen;--logo-filter:invert(1) sepia(.35)}
+  --logo-op:.11;--logo-blend:screen;--logo-filter:invert(1) sepia(.35);--beam:0;--dark:.42}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:clip}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:clip;transition:background 1.6s,color 1.6s}
@@ -84,6 +84,7 @@ body.night .seal{opacity:.8}
 .tip b{display:block;font:500 1.05rem/1.2 var(--serif);color:var(--brass-lt);margin-bottom:.2rem}
 .dayonly{transition:opacity 2.6s}.nightonly{opacity:0;transition:opacity 2.6s}
 body.night .dayonly{opacity:0}body.night .nightonly{opacity:1}
+body.night .beam{opacity:0!important;animation:none}
 .wallpaint{opacity:.9}body.night .wallpaint{opacity:.95}
 .intro{padding:2.4rem 0 1rem;text-align:center;position:relative}
 .intro .eyebrow{display:block;margin-bottom:1rem}
