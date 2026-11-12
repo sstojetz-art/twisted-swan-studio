@@ -4,35 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Studio | Twisted Swann Studio</title>
-<meta name="description" content="Step inside Twisted Swann Studio, where Jamie Swann-Stojetz twists wire and genuine gemstones into one-of-a-kind bonsai sculptures.">
-<meta property="og:title" content="Step inside the Twisted Swann Studio">
-<meta property="og:description" content="Watch a gemstone bonsai come to life, from bare wire to finished tree. One of one, every time.">
+<meta name="description" content="Handmade gemstone bonsai by Jamie Swann-Stojetz. Twisted by hand, jeweled stone by stone, rooted in natural rock. One of one, every time.">
+<meta property="og:title" content="Twisted Swann Studio">
+<meta property="og:description" content="Handmade gemstone bonsai. One of one, every time.">
 <meta property="og:image" content="https://i.etsystatic.com/62268545/r/il/081dc4/8699651985/il_794xN.8699651985_3073.jpg">
 <link rel="icon" href="https://i.etsystatic.com/isc/4b516b/1411091600330/isc_90x90.1411091600330_mvsm.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{
-  --serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;
-  --brass:#c9a265;--brass-lt:#e8cf98;--gold:#c9a96e;
-  /* DAY */
-  --wall1:#efe5d6;--wall2:#d8c6ae;--sky1:#7fb8e2;--sky2:#d9eefa;--hill:#6f9a62;--hill2:#4f7d4a;
-  --top1:#a56f42;--top2:#7a4c2b;--front1:#5c3a21;--front2:#3e2615;--grain:rgba(40,20,8,.28);
-  --shelf:#7a4e2c;--frame:#1d1a17;--beam:.95;--led:.35;--lamp:.55;--dark:0;
-  --bg:#f4ece0;--bg2:#ebe0d0;--text:#2b1d14;--muted:#6b5646;--line:rgba(120,85,50,.22);--card:#fbf6ee;
-  --onwall:#2b1d14;--onwall-muted:#5d4636;
-}
-body.night{
-  --wall1:#2c2420;--wall2:#18120f;--sky1:#070d22;--sky2:#1b2850;--hill:#0f1a1c;--hill2:#0a1214;
-  --top1:#5c3b22;--top2:#3a2414;--front1:#2c1b0f;--front2:#170e07;--grain:rgba(0,0,0,.35);
-  --shelf:#3d2716;--frame:#0b0908;--beam:0;--led:.62;--lamp:1;--dark:.42;
-  --bg:#120d0a;--bg2:#1a1310;--text:#f2e8da;--muted:#b3a08c;--line:rgba(201,162,101,.22);--card:#1d1612;
-  --onwall:#f6ecdc;--onwall-muted:#cdb9a2;
-}
+:root{--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;--brass:#b8914f;--brass-lt:#e8cf98;
+  --bg:#f6f0e6;--bg2:#efe6d8;--text:#22170f;--muted:#6b5646;--line:rgba(120,85,50,.2);--card:#fbf7f0;--top1:#a56f42;--front1:#5c3a21;
+  --logo-op:.13;--logo-blend:multiply;--logo-filter:none}
+body.night{--bg:#100c0a;--bg2:#17110e;--text:#f2e8da;--muted:#b3a08c;--line:rgba(201,162,101,.2);--card:#1b1411;--top1:#5c3b22;--front1:#2c1b0f;--brass:#c9a265;
+  --logo-op:.11;--logo-blend:screen;--logo-filter:invert(1) sepia(.35)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:clip}
-body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:clip;transition:background 2s,color 2s}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:clip;transition:background 1.6s,color 1.6s}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 .wrap{width:min(1200px,92vw);margin:0 auto}
@@ -43,136 +31,101 @@ em{font-style:italic;color:var(--brass)}
 .btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:.6em;padding:1em 1.8em;font:500 .76rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--brass);background:var(--brass);color:#1a120c;transition:.3s;cursor:pointer}
 .btn:hover{background:var(--brass-lt)}
 .btn.ghost{background:transparent;color:var(--brass)}
-.btn::after{content:"";position:absolute;top:0;bottom:0;width:38%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:shine 6s 2s infinite;pointer-events:none}
-@keyframes shine{0%,72%{left:-60%}100%{left:130%}}
 
-/* NAV */
-nav.top{position:fixed;inset:0 0 auto;z-index:60;transition:background .5s}
-nav.top.solid{background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top{position:fixed;inset:0 0 auto;z-index:60;transition:background .5s,border-color .5s;border-bottom:1px solid transparent}
+nav.top.solid{background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-color:var(--line)}
 nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}
-.brand{display:flex;align-items:center;gap:.7rem;color:#f6ecdc}
-nav.top.solid .brand{color:var(--text)}
-.brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;object-position:18% 12%}
+.brand{display:flex;align-items:center;gap:.7rem}
+.seal{border-radius:50%;background-image:url(https://i.etsystatic.com/isc/4b516b/1411091600330/isc_fullxfull.1411091600330_mvsm.jpg);background-size:404.5%;background-position:3.5% 3.7%;background-color:#fff}
+.brand .seal{width:40px;height:40px;box-shadow:0 0 0 1px var(--line)}
 .brand span{font-family:var(--serif);font-size:1.35rem;letter-spacing:.04em;white-space:nowrap}
 .navr{display:flex;align-items:center;gap:1.4rem}
-.navr a.l{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:#e9dcc8}
-nav.top.solid .navr a.l{color:var(--muted)}
+.navr a.l{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
 .navr a.l:hover{color:var(--brass)}
-.toggle{display:flex;align-items:center;gap:.5rem;border:1px solid var(--brass);border-radius:40px;padding:.45rem .8rem;background:rgba(20,13,9,.55);color:var(--brass);font:500 .66rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
+.toggle{display:flex;align-items:center;gap:.5rem;border:1px solid var(--brass);border-radius:40px;padding:.45rem .8rem;background:transparent;color:var(--brass);font:500 .66rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
 .toggle svg{width:16px;height:16px}
 
-/* SCENE (real photo + live layers) */
-:root{--sh:max(420px,min(82vh,56vw));--fx:-50%}
-.scene{position:relative;height:var(--sh);overflow:hidden;background:#120c08}
-.room{position:absolute;top:50%;left:50%;width:max(100%,calc(var(--sh) * 3.567));aspect-ratio:1680/471;transform:translate(var(--fx),-50%)}
-.room img{position:absolute;inset:0;width:100%;height:100%;display:block;user-select:none}
-.room img.n{opacity:0;transition:opacity 2.6s ease}
-body.night .room img.n{opacity:1}
-#ov{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.glow{mix-blend-mode:screen;opacity:calc(.42 + var(--dark)*1.3);transition:opacity 1.2s;animation:breathe 6s ease-in-out infinite alternate}
-.lampg{cursor:pointer}
-.lampg.off .glow{opacity:0!important}
-.lampg.off .shade{opacity:.55}
-.shade{mix-blend-mode:multiply;opacity:0;transition:opacity 1.2s;pointer-events:none}
-@keyframes breathe{0%{filter:brightness(.7)}55%{filter:brightness(1.08)}100%{filter:brightness(.88)}}
-.beam{mix-blend-mode:screen;opacity:var(--beam);transition:opacity 2.4s;animation:beamA 9s ease-in-out infinite alternate}
-@keyframes beamA{from{opacity:calc(var(--beam)*.55)}to{opacity:var(--beam)}}
-.sign text,.words text{font-family:'Cormorant Garamond',Georgia,serif}
-.words text{font-family:'Jost',system-ui,sans-serif;font-weight:400}
-.sign,.words{transition:filter 2.4s}
-body.night .sign,body.night .words{filter:url(#warmglow)}
-body.night .seal{opacity:.8}
-.gtree{cursor:pointer;transition:filter 2.4s}
-body.night .gtree{filter:brightness(.7)}
-.gtree:hover{filter:brightness(1.15)}
-.gemdot{animation:tw 2.4s ease-in-out infinite alternate}
-@keyframes tw{from{opacity:.35}to{opacity:1}}
-.tree .wire{fill:none;stroke-linecap:round}
-.grow .wire{stroke-dasharray:var(--l,400);stroke-dashoffset:var(--l,400);animation:draw 1.6s cubic-bezier(.5,0,.2,1) forwards;animation-delay:var(--d,0s)}
-.grow .gem{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:pop .5s cubic-bezier(.3,1.9,.5,1) forwards;animation-delay:var(--d)}
-@keyframes draw{to{stroke-dashoffset:0}}
-@keyframes pop{to{transform:scale(1)}}
-#motes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
-.scene::before{content:"";position:absolute;inset:0 0 auto;height:22%;background:linear-gradient(rgba(10,6,3,.6),transparent);z-index:4;pointer-events:none}
-.scene::after{content:"";position:absolute;inset:auto 0 0;height:14%;background:linear-gradient(transparent,var(--bg));z-index:4;pointer-events:none;transition:background 2s}
-.hint{position:absolute;left:50%;bottom:.9rem;transform:translateX(-50%);z-index:5;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--text);opacity:.8;pointer-events:none;white-space:nowrap}
-.tip{position:fixed;z-index:90;pointer-events:none;background:#1a120c;color:#f3e6d0;border:1px solid var(--brass);padding:.6rem .85rem;max-width:240px;font-size:.82rem;line-height:1.45;opacity:0;transform:translateY(6px);transition:opacity .25s,transform .25s}
-.tip.on{opacity:1;transform:none}
-.tip b{display:block;font:500 1.05rem/1.2 var(--serif);color:var(--brass-lt);margin-bottom:.2rem}
-.intro{padding:2.4rem 0 4.5rem;text-align:center}
-.intro .eyebrow{display:block;margin-bottom:1rem}
-.intro h1{font-size:clamp(2.4rem,5vw,4.2rem);margin-bottom:1rem}
-.intro p{color:var(--muted);max-width:34rem;margin:0 auto 1.8rem;font-size:1.04rem}
-.intro .ctas{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+/* HERO: her logo as the backdrop */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:110px 0 70px;overflow:hidden;text-align:center}
+.logo-bg{position:absolute;left:50%;top:50%;width:min(118vh,112vw);aspect-ratio:1;transform:translate(-50%,-50%);opacity:var(--logo-op);mix-blend-mode:var(--logo-blend);filter:var(--logo-filter);pointer-events:none;transition:opacity 1.6s,filter 1.6s}
+.hero-in{position:relative;z-index:2;width:min(780px,90vw)}
+.hero-in .eyebrow{display:block;margin-bottom:1.1rem}
+.hero h1{font-size:clamp(2.7rem,6.2vw,5rem);margin-bottom:1.1rem}
+.hero p{color:var(--muted);max-width:34rem;margin:0 auto 2rem;font-size:1.05rem}
+.ctas{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.row{position:relative;z-index:2;display:flex;gap:1.1rem;justify-content:center;align-items:flex-end;margin-top:3.4rem;width:min(1200px,94vw)}
+.row a{position:relative;flex:1;max-width:220px;aspect-ratio:3/4;overflow:hidden;background:#000;border-radius:120px 120px 4px 4px;box-shadow:0 30px 50px -28px rgba(0,0,0,.55);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.row a:nth-child(3){max-width:260px}
+.row a:hover{transform:translateY(-8px)}
+.row img{width:100%;height:100%;object-fit:cover}
+.row span{position:absolute;inset:auto 0 0;padding:1.6rem .8rem .8rem;background:linear-gradient(transparent,rgba(0,0,0,.8));color:#f3e6d0;font:400 .95rem/1.25 var(--serif);opacity:0;transition:opacity .4s}
+.row span b{display:block;font:500 .7rem/1 var(--sans);letter-spacing:.16em;color:var(--brass-lt);margin-top:.35rem}
+.row a:hover span{opacity:1}
 
-section{padding:clamp(4.5rem,9vw,7.5rem) 0;transition:background 2s}
+section{padding:clamp(4.5rem,9vw,7.5rem) 0}
 .head{text-align:center;max-width:44rem;margin:0 auto 3.4rem}
 .head .eyebrow{display:block;margin-bottom:1rem}
 .head p{color:var(--muted);margin-top:1rem}
 
-/* MAKING */
-#making{background:var(--bg2)}
-.stages{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;counter-reset:s}
-.st{background:var(--card);border:1px solid var(--line);padding:1.6rem 1.4rem 1.8rem;text-align:center;transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .4s,background 2s}
-.st:hover{transform:translateY(-8px);border-color:var(--brass)}
-.st .art{height:190px;margin-bottom:.8rem}
-.st .art svg{height:100%;width:auto;margin:0 auto;overflow:visible}
+#making{background:var(--bg2);transition:background 1.6s}
+.stages{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.st{background:var(--card);border:1px solid var(--line);transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .4s,background 1.6s}
+.st:hover{transform:translateY(-6px);border-color:var(--brass)}
+.st .ph{aspect-ratio:1;overflow:hidden;background:#000}
+.st .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.st:hover .ph img{transform:scale(1.05)}
+.st .tx{padding:1.4rem 1.3rem 1.6rem}
 .st .n{font:italic 400 1rem/1 var(--serif);color:var(--brass);letter-spacing:.1em}
-.st h3{font-size:1.7rem;margin:.4rem 0 .6rem}
-.st p{color:var(--muted);font-size:.93rem}
-.arrow{display:none}
+.st h3{font-size:1.65rem;margin:.35rem 0 .5rem}
+.st p{color:var(--muted);font-size:.92rem}
+.st small{display:block;margin-top:.8rem;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
 
-/* GALLERY */
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:3.2rem 1.6rem}
 .piece{display:block;position:relative;text-align:center}
 .piece .spot{position:relative;aspect-ratio:1;overflow:hidden;background:#000}
-.piece .spot::before{content:"";position:absolute;inset:-20% 10% 40%;background:radial-gradient(ellipse at 50% 0,rgba(255,236,190,.38),transparent 70%);z-index:2;pointer-events:none;opacity:.5;transition:opacity .5s}
-.piece:hover .spot::before{opacity:1}
 .piece img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
 .piece:hover img{transform:scale(1.06)}
-.piece .ledge{height:14px;margin:0 -10px;background:linear-gradient(180deg,var(--top1),var(--front1));box-shadow:0 10px 18px -8px rgba(0,0,0,.5);transition:background 2s}
+.piece .ledge{height:12px;margin:0 -10px;background:linear-gradient(180deg,var(--top1),var(--front1));box-shadow:0 10px 18px -8px rgba(0,0,0,.45);transition:background 1.6s}
 .piece .badge{position:absolute;top:.8rem;left:.8rem;z-index:3;background:rgba(20,13,9,.75);color:var(--brass-lt);font:500 .6rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:.45rem .6rem;border:1px solid rgba(232,207,152,.4)}
 .piece h3{font-size:1.25rem;margin:1rem 0 .2rem}
 .piece .pr{color:var(--brass);font-size:.9rem;letter-spacing:.06em}
 .piece .go{display:inline-block;margin-top:.4rem;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);opacity:0;transition:opacity .3s}
 .piece:hover .go{opacity:1}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
-.reveal.in{opacity:1;transform:none}
 .center{text-align:center;margin-top:3.4rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 .promise{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:4.5rem}
 .promise div{padding:1.4rem 1rem;text-align:center;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 .promise div+div{border-left:1px solid var(--line)}
 .promise b{display:block;font:italic 400 1.45rem/1.2 var(--serif);letter-spacing:0;text-transform:none;color:var(--brass);margin-bottom:.2rem}
-
-/* REVIEWS + CUSTOM */
-#love{background:var(--bg2)}
+#love{background:var(--bg2);transition:background 1.6s}
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
 .rv{border-top:1px solid var(--line);padding-top:1.4rem}
 .rv .s{color:var(--brass);letter-spacing:.2em}
 .rv p{font:italic 400 1.35rem/1.45 var(--serif);margin:.8rem 0}
 .rv small{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.custom{text-align:center}
-.custom .wrap{max-width:46rem}
+.custom{text-align:center;position:relative;overflow:hidden}
+.custom .seal.big{position:absolute;left:50%;top:50%;width:min(620px,90vw);aspect-ratio:1;transform:translate(-50%,-50%);opacity:var(--logo-op);mix-blend-mode:var(--logo-blend);filter:var(--logo-filter);pointer-events:none}
+.custom .wrap{max-width:46rem;position:relative}
 .custom p{color:var(--muted);margin:1.2rem 0 2.2rem;font-size:1.06rem}
-.custom .ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 footer{border-top:1px solid var(--line);padding:2.6rem 0;font-size:.82rem;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:center}
 footer .fl{display:flex;gap:1.6rem;flex-wrap:wrap}
 footer .fl a{letter-spacing:.18em;text-transform:uppercase;font-size:.7rem}
 footer .fl a:hover{color:var(--brass)}
-
-#snd{position:fixed;right:1.2rem;bottom:1.2rem;z-index:80;display:flex;align-items:center;gap:.65rem;padding:.8rem 1.1rem;border:1px solid var(--brass);background:rgba(20,13,9,.82);backdrop-filter:blur(8px);color:var(--brass-lt);font:500 .64rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;cursor:pointer;border-radius:40px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+#snd{position:fixed;right:1.2rem;bottom:1.2rem;z-index:80;display:flex;align-items:center;gap:.65rem;padding:.8rem 1.1rem;border:1px solid var(--brass);background:rgba(20,13,9,.85);backdrop-filter:blur(8px);color:var(--brass-lt);font:500 .64rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;cursor:pointer;border-radius:40px}
 #snd .eq{display:flex;gap:2px;align-items:flex-end;height:13px}
-#snd .eq i{width:2px;height:3px;background:var(--brass)}
+#snd .eq i{width:2px;height:3px;background:var(--brass-lt)}
 #snd.on .eq i{animation:eq .8s ease-in-out infinite alternate}
 #snd.on .eq i:nth-child(2){animation-delay:.25s}#snd.on .eq i:nth-child(3){animation-delay:.5s}#snd.on .eq i:nth-child(4){animation-delay:.12s}
-#snd.nudge{animation:nudge 1.8s ease-out 4}
 @keyframes eq{from{height:3px}to{height:13px}}
-@keyframes nudge{0%{box-shadow:0 0 0 0 rgba(201,162,101,.6)}100%{box-shadow:0 0 0 16px rgba(201,162,101,0)}}
 
 @media (max-width:900px){
   .navr a.l{display:none}
   .brand span{font-size:1.1rem}
+  .row{gap:.6rem;margin-top:2.6rem}
+  .row a:nth-child(1),.row a:nth-child(5){display:none}
+  .row a{border-radius:80px 80px 4px 4px}
   .stages{grid-template-columns:1fr 1fr}
   .revs{grid-template-columns:1fr}
   .promise{grid-template-columns:1fr 1fr}
@@ -180,17 +133,17 @@ footer .fl a:hover{color:var(--brass)}
   .promise div:nth-child(n+3){border-top:1px solid var(--line)}
   .gal{grid-template-columns:repeat(2,1fr);gap:2.4rem 1rem}
   .piece h3{font-size:1.05rem}
-  :root{--sh:48vh;--fx:-55.7%}
-  .hint{display:none}
+  .st h3{font-size:1.3rem}
+  .st .tx{padding:1rem}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.grow .wire{stroke-dashoffset:0}.grow .gem{transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 
 <nav class="top" id="nav">
   <div class="wrap">
-    <a href="#top" class="brand"><img src="https://i.etsystatic.com/isc/4b516b/1411091600330/isc_fullxfull.1411091600330_mvsm.jpg" alt="Twisted Swann Studio logo"><span>Twisted Swann Studio</span></a>
+    <a href="#top" class="brand"><span class="seal" role="img" aria-label="Twisted Swann Studio logo"></span><span>Twisted Swann Studio</span></a>
     <div class="navr">
       <a class="l" href="#making">The Making</a>
       <a class="l" href="#gallery">Gallery</a>
@@ -200,35 +153,27 @@ footer .fl a:hover{color:var(--brass)}
   </div>
 </nav>
 
-<header class="scene" id="top">
-  <div class="room">
-    <img class="d" src="img/day.jpg" alt="Jamie's studio by day: a live-edge walnut worktable in front of tall sunlit windows, bonsai trees on the sills, pendant lamps, a pegboard of pliers and shelves of wire and stone">
-    <img class="n" src="img/night.jpg" alt="The same studio at night, lit by warm pendant lamps">
-    <svg id="ov" viewBox="0 0 1680 471" preserveAspectRatio="none" aria-hidden="true"></svg>
+<header class="hero" id="top">
+  <div class="seal logo-bg" aria-hidden="true"></div>
+  <div class="hero-in">
+    <span class="eyebrow">Handmade Gemstone Bonsai</span>
+    <h1>Where wire becomes<br><em>a living tree</em></h1>
+    <p>Twisted by hand, jeweled stone by stone, and rooted in natural rock by Jamie Swann-Stojetz. One of one, every time.</p>
+    <div class="ctas"><a class="btn" href="#gallery">Shop the gallery</a><a class="btn ghost" href="#custom">Commission a tree</a></div>
   </div>
-  <canvas id="motes" aria-hidden="true"></canvas>
-  <div class="hint">Tap a lamp &middot; hover the trees on the table</div>
+  <div class="row" id="row"></div>
 </header>
-
-<section class="intro">
-  <div class="wrap">
-    <span class="eyebrow">Welcome to the Studio</span>
-    <h1>Where wire becomes <em>a living tree</em></h1>
-    <p>On the worktable: four trees in four stages. Bare wire, shaped branches, the first gemstones, and one finished on its amethyst stone. Every piece in the gallery began exactly this way.</p>
-    <div class="ctas"><a class="btn" href="#gallery">Shop finished pieces</a><a class="btn ghost" href="#making">Watch one come to life</a></div>
-  </div>
-</section>
 
 <section id="making">
   <div class="wrap">
-    <div class="head reveal"><span class="eyebrow">The Making</span><h2>From bare wire<br>to <em>one of one</em></h2><p>Each tree passes through four stages on Jamie's worktable. Many hours, hundreds of small decisions, and a finished sculpture that can never be made again.</p></div>
+    <div class="head reveal"><span class="eyebrow">The Making</span><h2>From bare wire<br>to <em>one of one</em></h2><p>Every tree passes through four stages on Jamie's worktable. Each is shown here in one of her finished pieces.</p></div>
     <div class="stages" id="stages"></div>
   </div>
 </section>
 
 <section id="gallery">
   <div class="wrap">
-    <div class="head reveal"><span class="eyebrow">The Gallery Shelf</span><h2>Finished, signed, and<br><em>waiting for a home</em></h2><p>Every tree below is the only one of its kind. When it finds its home, it is gone for good.</p></div>
+    <div class="head reveal"><span class="eyebrow">The Gallery</span><h2>Finished, and<br><em>waiting for a home</em></h2><p>Every tree below is the only one of its kind. When it finds its home, it is gone for good.</p></div>
     <div class="gal" id="gal"></div>
     <div class="center"><a class="btn" href="https://www.etsy.com/shop/TwistedSwannStudio" target="_blank" rel="noopener">See every piece on Etsy &rarr;</a><a class="btn ghost" href="../#collection">Browse the full collection</a></div>
     <div class="promise reveal">
@@ -252,6 +197,7 @@ footer .fl a:hover{color:var(--brass)}
 </section>
 
 <section id="custom" class="custom">
+  <div class="seal big" aria-hidden="true"></div>
   <div class="wrap reveal">
     <span class="eyebrow">Commission a Tree</span>
     <h2>Your stones. Your colors.<br><em>Your tree.</em></h2>
@@ -268,131 +214,40 @@ footer .fl a:hover{color:var(--brass)}
 </footer>
 
 <button id="snd" aria-pressed="false" aria-label="Turn sound on"><span class="eq"><i></i><i></i><i></i><i></i></span><span class="lbl">Sound on</span></button>
-<div class="tip" id="tip"></div>
 
 <script>
-const RM=matchMedia("(prefers-reduced-motion: reduce)").matches,FINE=matchMedia("(pointer:fine)").matches;
-const GEMS=["#e6cf9c","#ffffff","#e7a3ac","#9fd8e6","#b89be6","#8fd9a8","#ef8fa0","#f6e6b4","#7fc4e8"];
-let seed=1;const rnd=()=>(seed=(seed*9301+49297)%233280)/233280;
 const ET=p=>{const[h,ns]=p.split("/");return`https://i.etsystatic.com/62268545/r/il/${h}/${ns.split("_")[0]}/il_794xN.${ns}.jpg`};
+const esc=s=>s.replace(/&/g,"&amp;");
 
-/* ---------- gem tree in a given stage (local box 0..200 x 0..220, base y≈205) ---------- */
-const TRUNK=["M100 196 C 95 160, 109 138, 98 112 C 89 90, 105 74, 100 54","M104 196 C 109 160, 93 138, 102 112 C 111 90, 95 74, 100 54","M102 196 C 99 165, 104 140, 100 112 C 97 90, 102 72, 100 54"];
-const ROOTS=["M100 196 C 90 200, 76 202, 62 205","M104 196 C 116 200, 130 202, 144 205","M102 197 C 104 201, 112 204, 118 206"];
-const BR=["M98 112 C 82 104, 66 98, 46 84","M102 112 C 120 102, 138 98, 156 86","M99 86 C 86 76, 74 68, 62 52","M101 86 C 116 76, 128 66, 140 50","M100 56 C 96 44, 92 34, 84 22","M100 56 C 106 44, 112 34, 120 22","M98 100 C 88 96, 80 94, 70 96","M102 100 C 114 94, 122 92, 134 94"];
-const TIPS=[[46,84,10],[156,86,10],[62,52,9],[140,50,9],[84,22,8],[120,22,8],[100,40,7],[70,96,6],[134,94,6]];
-function stageTree(stage,uid,animate,bold=1){
-  seed=3;let s="";
-  const w=(d,t,wd)=>`<path class="wire" d="${d}" stroke="url(#wg${uid})" stroke-width="${((wd||1.6)*bold).toFixed(2)}" style="--d:${t}s"/>`;
-  if(stage===1){ // raw strands gathered, splayed, not yet twisted, clamped in a small jig
-    for(let i=0;i<9;i++){const x=88+i*3,top=60+rnd()*14,fan=(i-4)*7;
-      s+=w(`M${x} 196 C ${x} 160, ${x+fan*.2} 110, ${x+fan} ${top}`,i*.06,1.2)}
-    s+=`<rect x="78" y="180" width="44" height="22" rx="3" fill="#2b2622"/><rect x="74" y="176" width="52" height="7" rx="2" fill="#5a524a"/><circle cx="100" cy="191" r="3.2" fill="#9a8f80"/>`;
-    return s;
-  }
-  TRUNK.forEach((d,i)=>s+=w(d,i*.08,1.7));ROOTS.forEach((d,i)=>s+=w(d,.3+i*.05,1.4));
-  BR.forEach((d,i)=>s+=w(d,.6+i*.06,1.3));
-  if(stage>=3){
-    let k=0;TIPS.forEach(([x,y,n],ti)=>{const cnt=stage===3?(ti%2?Math.ceil(n*.35):0):n;
-      for(let i=0;i<n;i++){const a=rnd()*6.28,r=3+rnd()*11,cx=(x+Math.cos(a)*r).toFixed(1),cy=(y+Math.sin(a)*r*.8).toFixed(1),rr=((1.7+rnd()*2.1)*(bold>1?1.45:1)).toFixed(1),col=GEMS[Math.floor(rnd()*GEMS.length)];
-        if(i<cnt)s+=`<circle class="gem gemdot" cx="${cx}" cy="${cy}" r="${rr}" fill="${col}" style="--d:${(1.4+k++*.02).toFixed(2)}s;animation-delay:${(rnd()*2.4).toFixed(2)}s"/>`}});
-    if(stage===3)s+=`<g transform="translate(150 196)"><circle r="3" fill="#ef8fa0"/><circle cx="7" cy="2" r="2.6" fill="#9fd8e6"/><circle cx="-6" cy="3" r="2.4" fill="#e6cf9c"/></g>`;
-  }
-  if(stage===4)s=`<path d="M40 214 C 46 192, 74 188, 100 192 C 128 188, 152 186, 164 210 C 142 222, 66 224, 40 214 Z" fill="url(#ame${uid})"/><path d="M70 198 l8 -10 l6 12 z M118 196 l7 -12 l8 13 z M96 194 l5 -8 l5 9z" fill="#e4d4f6" opacity=".7"/>`+s;
-  if(stage===2)s=`<path d="M60 212 C 70 200, 130 198, 142 212 Z" fill="#4a4440"/>`+s;
-  if(stage===3)s=`<path d="M56 212 C 66 198, 134 196, 146 212 Z" fill="#4a4440"/>`+s;
-  return s;
-}
-const wireDefs=uid=>`<linearGradient id="wg${uid}" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#8a6a3a"/><stop offset="1" stop-color="#f0d9a6"/></linearGradient><radialGradient id="ame${uid}" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#d6c2f0"/><stop offset=".55" stop-color="#7a5f9e"/><stop offset="1" stop-color="#2e2340"/></radialGradient>`;
+/* hero row: five real pieces */
+const R=[["4569231574","Rose Quartz Bonsai",219,"fdc81c/8485923468_pw1l"],["4459174696","Aquamarine, Blue Topaz & Blue Calcite",289,"e964f3/8348094079_r7wc"],["4592162771","Black Opal & Herkimer Diamond",449,"081dc4/8699651985_3073"],["4608584003","Multicolor Freshwater Pearl",359,"b9129e/8835122393_mymt"],["4497985240","Cascading Chakra Tree",299,"e1f71d/8534144573_5l1r"]];
+document.getElementById("row").innerHTML=R.map(([id,t,pr,p])=>`<a href="https://www.etsy.com/listing/${id}" target="_blank" rel="noopener"><img src="${ET(p)}" alt="${esc(t)}, handmade gemstone bonsai"><span>${esc(t)}<b>$${pr}</b></span></a>`).join("");
 
-/* ---------- live layers over the photo (image coordinates 1680 x 471) ---------- */
-const LOGO="https://i.etsystatic.com/isc/4b516b/1411091600330/isc_fullxfull.1411091600330_mvsm.jpg";
-function overlay(){
-  const L=[[572,44,62],[825,10,70],[1013,32,62],[630,96,34],[825,74,34],[963,98,34],[1062,70,30]];
-  const lamps=L.map(([x,y,r],i)=>`<g class="lampg" data-i="${i}"><circle class="shade" cx="${x}" cy="${y+r*1.2}" r="${r*2.6}" fill="url(#shadeg)"/><circle class="glow" cx="${x}" cy="${y}" r="${r*1.9}" fill="url(#lampglow)" style="animation-delay:${-i*1.3}s"/><circle cx="${x}" cy="${y}" r="${Math.max(18,r*.55)}" fill="transparent"/></g>`).join("");
-  const words=["BONSAI","GEMSTONE","WIRE","CRYSTAL","STONE","NATURE","ART","YOU"].map((w,i)=>`<text x="1604" y="${40+i*27}" text-anchor="middle" font-size="10.5" letter-spacing="1.8" fill="#d6a47b">${w}</text>`).join("");
-  const T=[[792,434,.58,1],[884,434,.6,2],[976,434,.6,3],[1084,440,.7,4]];
-  const trees=T.map(([x,b,sc,st])=>`<g class="gtree" data-s="${st-1}"><ellipse cx="${x}" cy="${b+1}" rx="${34*sc/.4}" ry="4.5" fill="#000" opacity=".38" filter="url(#blur3)"/><g transform="translate(${x-100*sc} ${b-205*sc}) scale(${sc})"><g class="tree">${stageTree(st,"s",false,2.3)}</g></g><g transform="translate(${x} ${b+7})"><rect x="-11" y="-5.5" width="22" height="11" rx="1" fill="#c9a265"/><text y="3.2" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="9.5" font-style="italic" fill="#2b1d14">${["I","II","III","IV"][st-1]}</text></g><rect x="${x-45*sc/.4}" y="${b-100*sc/.4}" width="${90*sc/.4}" height="${110*sc/.4}" fill="transparent"/></g>`).join("");
-  return `<defs>${wireDefs("s")}
-   <radialGradient id="lampglow"><stop offset="0" stop-color="#fff2d2" stop-opacity=".95"/><stop offset=".3" stop-color="#ffcf80" stop-opacity=".42"/><stop offset="1" stop-color="#ffb04a" stop-opacity="0"/></radialGradient>
-   <radialGradient id="shadeg"><stop offset="0" stop-color="#3a2a1c" stop-opacity=".9"/><stop offset="1" stop-color="#3a2a1c" stop-opacity="0"/></radialGradient>
-   <linearGradient id="beamg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff4d6" stop-opacity=".5"/><stop offset="1" stop-color="#fff4d6" stop-opacity="0"/></linearGradient>
-   <clipPath id="sealc"><circle r="15.5"/></clipPath>
-   <filter id="blur3"><feGaussianBlur stdDeviation="2.5"/></filter>
-   <filter id="warmglow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.2" result="b"/><feFlood flood-color="#ffb860" flood-opacity=".9"/><feComposite in2="b" operator="in" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-   <polygon class="beam" points="300,0 560,0 980,471 560,471" fill="url(#beamg)"/><polygon class="beam" points="20,0 290,0 640,471 230,471" fill="url(#beamg)" style="animation-delay:-4.5s"/>
-   ${lamps}
-   <g class="sign"><g class="seal" transform="translate(845 103)"><circle r="17" fill="#eee5d6"/><image href="${LOGO}" x="-18.8" y="-19" width="125.4" height="125.4" clip-path="url(#sealc)" preserveAspectRatio="none"/><circle r="17" fill="none" stroke="#c9a265" stroke-width="1.2"/></g>
-     <text x="845" y="132" text-anchor="middle" font-size="10" font-weight="600" letter-spacing="2.6" fill="#d9a77c">TWISTED SWANN STUDIO</text></g>
-   <g class="words">${words}</g>
-   ${trees}`;
-}
-const svg=document.getElementById("ov");svg.innerHTML=overlay();
-
-/* ---------- day / night ---------- */
-const dnBtn=document.getElementById("dn"),dnl=document.getElementById("dnl");
-function setNight(on,quiet){document.body.classList.toggle("night",on);dnl.textContent=on?"Day":"Night";
-  dnBtn.querySelectorAll(".sunico").forEach(e=>e.style.display=on?"none":"");dnBtn.querySelector(".moonico").style.display=on?"":"none";
-  if(!quiet)swell(on)}
-const hr=new Date().getHours();setNight(hr<7||hr>=19,true);
-dnBtn.onclick=()=>setNight(!document.body.classList.contains("night"));
-
-/* ---------- lamps click ---------- */
-svg.querySelectorAll(".lampg").forEach(l=>l.addEventListener("click",()=>{l.classList.toggle("off");click(!l.classList.contains("off"))}));
-
-/* ---------- tooltips for stages & photos ---------- */
-const tip=document.getElementById("tip");
-const ST=[["I. Twist","Dozens of strands of fine wire, gathered and clamped, ready to be twisted into a trunk."],["II. Shape","The trunk is twisted by hand, then split into roots and branches and bent into a bonsai form."],["III. Adorn","Genuine gemstones are wired onto the branches, one at a time."],["IV. Rooted","Finished, jeweled, and set into a natural stone. One of one."]];
-function showTip(e,html){tip.innerHTML=html;tip.classList.add("on");const x=Math.min(e.clientX+16,innerWidth-260),y=Math.min(e.clientY+16,innerHeight-120);tip.style.left=x+"px";tip.style.top=y+"px"}
-svg.addEventListener("pointermove",e=>{const st=e.target.closest(".gtree"),ph=null,lp=e.target.closest(".lampg");
-  if(st){const s=ST[st.dataset.s];showTip(e,`<b>${s[0]}</b>${s[1]}`)}
-  else if(ph)showTip(e,`<b>On the shelf</b>${ph.dataset.l}<br><span style="color:#c9a265">Click to view on Etsy &rarr;</span>`)
-  else if(lp)showTip(e,`<b>Pendant lamp</b>Click to switch it on or off.`)
-  else tip.classList.remove("on")});
-svg.addEventListener("pointerleave",e=>{if(e.pointerType!=="touch")tip.classList.remove("on")});
-svg.addEventListener("click",e=>{const st=e.target.closest(".gtree");if(st&&e.pointerType!=="touch")document.getElementById("making").scrollIntoView({behavior:"smooth"})});
-svg.addEventListener("pointerdown",e=>{const st=e.target.closest(".gtree");if(st&&e.pointerType==="touch"){const x=ST[st.dataset.s];showTip(e,`<b>${x[0]}</b>${x[1]}`);setTimeout(()=>tip.classList.remove("on"),2600)}});
-let lastH=-1;svg.addEventListener("pointerover",e=>{const st=e.target.closest(".gtree");if(st&&+st.dataset.s!==lastH){lastH=+st.dataset.s;chime(SCALE[2+lastH*2],.08)}if(!st)lastH=-1});
-
-/* ---------- dust motes in the sunbeams / fireflies of gem light at night ---------- */
-if(!RM){
-  const cv=document.getElementById("motes"),cx=cv.getContext("2d"),sc=document.getElementById("top");
-  let W,H,ps=[],run=true,loop=false;const dpr=Math.min(devicePixelRatio||1,2);
-  const size=()=>{W=sc.clientWidth;H=sc.clientHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);ps=Array.from({length:Math.min(90,Math.round(W*H/14000))},mk)};
-  function mk(){return{x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.8,vx:.05+Math.random()*.18,vy:-.05+Math.random()*.12,p:Math.random()*6.28,s:.01+Math.random()*.03,c:GEMS[Math.floor(Math.random()*GEMS.length)]}}
-  size();addEventListener("resize",size);
-  const kick=()=>{if(!loop&&run&&!document.hidden){loop=true;requestAnimationFrame(t)}};
-  new IntersectionObserver(e=>{run=e[0].isIntersecting;kick()}).observe(sc);document.addEventListener("visibilitychange",kick);
-  function t(){if(!run||document.hidden){loop=false;return}cx.clearRect(0,0,W,H);const night=document.body.classList.contains("night");
-    for(const q of ps){q.x+=q.vx;q.y+=q.vy;q.p+=q.s;if(q.x>W+5)q.x=-5;if(q.y>H)q.y=0;if(q.y<0)q.y=H;
-      const a=(Math.sin(q.p)+1)/2;cx.globalAlpha=night?a*.85:a*.55;cx.fillStyle=night?q.c:"#fff7e0";
-      cx.beginPath();cx.arc(q.x,q.y,q.r*(night?1.3:1),0,6.28);cx.fill();if(night&&a>.8){cx.globalAlpha=(a-.8)*2;cx.beginPath();cx.arc(q.x,q.y,q.r*4,0,6.28);cx.fill()}}
-    requestAnimationFrame(t)}
-  kick();
-}
-
-/* ---------- the making ---------- */
-const MK=[["I","Twist","Dozens of strands of fine wire are gathered and clamped. The twist that follows becomes the tree's spine, and no two ever turn the same way."],
-["II","Shape","The trunk splits into roots and branches, bent by hand into the classic bonsai forms: upright, windswept, cascading, willow."],
-["III","Adorn","Genuine gemstones are wired on one at a time. Herkimer diamond, garnet, sapphire, opal, pearl. Hundreds of small decisions."],
-["IV","Rooted","The finished tree is set into a natural stone chosen for its character: geode, quartz, pyrite, labradorite. Then it is ready for a home."]];
-document.getElementById("stages").innerHTML=MK.map((m,i)=>`<div class="st reveal" style="transition-delay:${i*110}ms"><div class="art"><svg viewBox="30 0 150 225" aria-hidden="true"><defs>${wireDefs("m"+i)}</defs><g class="tree" data-i="${i}">${stageTree(i+1,"m"+i,true)}</g></svg></div><div class="n">Stage ${m[0]}</div><h3>${m[1]}</h3><p>${m[2]}</p></div>`).join("");
-const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const g=e.target;g.querySelectorAll(".wire").forEach(p=>p.style.setProperty("--l",Math.ceil(p.getTotalLength())+1));
-  requestAnimationFrame(()=>g.classList.add("grow"));sio.unobserve(g)}}),{threshold:.3});
-if(!RM)document.querySelectorAll("#stages .tree").forEach(g=>sio.observe(g));
+/* the making: real pieces that show each stage */
+const MK=[["I","Twist","Dozens of strands of fine wire are gathered and twisted by hand into a trunk. The twist is the tree's spine, and no two ever turn the same way.","4521959800","Gothic Cascading Bonsai","82dfb4/8348088957_amua"],
+["II","Shape","The strands split into roots and branches, bent by hand into the classic bonsai forms: upright, windswept, cascading, willow.","4433296910","Windswept Yin Yang Bonsai","c85215/8396283498_fjq3"],
+["III","Adorn","Genuine gemstones are wired on one at a time. Herkimer diamond, garnet, ruby, sapphire, opal, pearl. Hundreds of small decisions.","4597614157","Garnet, Ruby &amp; Smoky Topaz","2c2226/8743696601_78ya"],
+["IV","Rooted","The finished tree is set into a natural stone chosen for its character: geode, quartz, pyrite, labradorite. Then it is ready for a home.","4447161733","Amethyst Geode Bonsai","66ba4d/8493612027_df3p"]];
+document.getElementById("stages").innerHTML=MK.map((m,i)=>`<a class="st reveal" style="transition-delay:${i*100}ms" href="https://www.etsy.com/listing/${m[3]}" target="_blank" rel="noopener"><div class="ph"><img src="${ET(m[5])}" alt="${m[4]}" loading="lazy"></div><div class="tx"><div class="n">Stage ${m[0]}</div><h3>${m[1]}</h3><p>${m[2]}</p><small>Shown: ${m[4]}</small></div></a>`).join("");
 
 /* ---------- gallery ---------- */
 const P=[["4592162771","Black Opal & Herkimer Diamond on Sphalerite",449,"081dc4/8699651985_3073"],["4608584003","Multicolor Freshwater Pearl on Natural Geode",359,"b9129e/8835122393_mymt"],["4521959800","Gothic Cascading Bonsai",329,"82dfb4/8348088957_amua"],["4497985240","Cascading Chakra Tree on Natural Wood",299,"e1f71d/8534144573_5l1r"],["4459174696","Aquamarine, Blue Topaz & Blue Calcite on Quartz",289,"e964f3/8348094079_r7wc"],["4597614157","Garnet, Ruby & Smoky Topaz on Hand-Dug Quartz",279,"2c2226/8743696601_78ya"],["4569231574","Rose Quartz Bonsai Tree",219,"fdc81c/8485923468_pw1l"],["4392687213","Pearl & Pink Sapphire on Natural Geode",229,"232ff2/8739017945_f8p3"],["4414414085","Aquamarine, Blue Topaz & Peridot on Glass Slag",209,"900549/8444145865_f8r8"],["4447161733","Amethyst Geode Bonsai",169,"66ba4d/8493612027_df3p"],["4433271979","Yin Yang Gemstone Bonsai",169,"31d005/8651951778_ricm"],["4447175365","Mini Blue Calcite on Celestite",49,"8713b6/8534090305_o96w"]];
-const esc=s=>s.replace(/&/g,"&amp;");
+
 document.getElementById("gal").innerHTML=P.map(([id,t,pr,p],i)=>`<a class="piece reveal" style="transition-delay:${(i%4)*90}ms" href="https://www.etsy.com/listing/${id}" target="_blank" rel="noopener"><div class="spot"><span class="badge">One of one</span><img src="${ET(p)}" alt="${esc(t)}, handmade gemstone bonsai" loading="lazy"></div><div class="ledge"></div><h3>${esc(t)}</h3><div class="pr">$${pr}</div><span class="go">Make it yours &rarr;</span></a>`).join("");
 
-/* ---------- reveal, nav ---------- */
+
+/* reveal, nav, day/night */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
 document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 const sweep=()=>document.querySelectorAll(".reveal:not(.in)").forEach(el=>{if(el.getBoundingClientRect().top<innerHeight*.95)el.classList.add("in")});
 setInterval(sweep,1200);
-const nav=document.getElementById("nav");const onS=()=>{nav.classList.toggle("solid",scrollY>innerHeight*.6);sweep()};addEventListener("scroll",onS,{passive:true});onS();
+const nav=document.getElementById("nav");const onS=()=>{nav.classList.toggle("solid",scrollY>40);sweep()};addEventListener("scroll",onS,{passive:true});onS();
 document.getElementById("yr").textContent=new Date().getFullYear();
+const dnBtn=document.getElementById("dn"),dnl=document.getElementById("dnl");
+function setNight(on,quiet){document.body.classList.toggle("night",on);dnl.textContent=on?"Day":"Night";
+  dnBtn.querySelectorAll(".sunico").forEach(e=>e.style.display=on?"none":"");dnBtn.querySelector(".moonico").style.display=on?"":"none";if(!quiet)swell(on)}
+const hr=new Date().getHours();setNight(hr<7||hr>=19,true);
+dnBtn.onclick=()=>setNight(!document.body.classList.contains("night"));
 
 /* ================= SOUND (generated live, no files) ================= */
 const snd=document.getElementById("snd"),S={ctx:null,on:false};
@@ -421,7 +276,7 @@ function ambient(){clearTimeout(S.t);if(!S.on)return;const n=1+Math.floor(Math.r
 snd.addEventListener("click",()=>{if(!S.ctx&&!initAudio())return;if(S.ctx.state==="suspended")S.ctx.resume();S.on=!S.on;const t=S.ctx.currentTime;
   S.master.gain.cancelScheduledValues(t);S.master.gain.setTargetAtTime(S.on?.85:0,t,S.on?.9:.25);snd.classList.toggle("on",S.on);snd.classList.remove("nudge");
   snd.setAttribute("aria-pressed",S.on);snd.querySelector(".lbl").textContent=S.on?"Sound off":"Sound on";if(S.on){arp([0,2,4,5,7],.08,.11);S.t=setTimeout(ambient,2200)}else clearTimeout(S.t)});
-setTimeout(()=>snd.classList.add("nudge"),3000);
+
 document.addEventListener("visibilitychange",()=>{if(!S.ctx)return;document.hidden?S.ctx.suspend():S.on&&S.ctx.resume()});
 let lastC=0;document.addEventListener("pointerover",e=>{if(!S.on||e.pointerType!=="mouse")return;const el=e.target.closest(".piece,.btn,.st,.toggle");if(!el||el.contains(e.relatedTarget))return;
   const now=performance.now();if(now-lastC<90)return;lastC=now;chime(SCALE[Math.floor(Math.random()*9)],el.matches(".piece")?.09:.05)});
