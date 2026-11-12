@@ -518,6 +518,9 @@ const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.tar
 const _render=render;
 render=f=>{_render(f);grid.querySelectorAll(".card").forEach((c,i)=>{c.style.transitionDelay=(i%4)*90+"ms";cio.observe(c)})};
 render("all");
+/* safety net: reveal anything already on screen even if IntersectionObserver is throttled */
+const sweep=()=>document.querySelectorAll(".reveal:not(.in),.card:not(.in)").forEach(el=>{if(el.getBoundingClientRect().top<innerHeight*.95)el.classList.add("in")});
+addEventListener("scroll",()=>requestAnimationFrame(sweep),{passive:true});setInterval(sweep,1200);
 
 /* --- 4-point glint shape --- */
 function glint(c,x,y,r){c.beginPath();c.moveTo(x,y-r);c.quadraticCurveTo(x,y,x+r,y);c.quadraticCurveTo(x,y,x,y+r);c.quadraticCurveTo(x,y,x-r,y);c.quadraticCurveTo(x,y,x,y-r);c.fill()}
