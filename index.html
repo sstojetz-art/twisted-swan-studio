@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twisted Swann Studio | Handmade Gemstone Bonsai by Jamie Swann-Stojetz</title>
+<meta name="description" content="One-of-a-kind gemstone bonsai sculptures, hand-twisted from wire and genuine gemstones and rooted in natural stone. Handmade by Jamie Swann-Stojetz.">
+<meta property="og:title" content="Twisted Swann Studio">
+<meta property="og:description" content="A little tree. A lot of magic. One-of-a-kind handmade gemstone bonsai.">
+<meta property="og:image" content="https://i.etsystatic.com/62268545/r/il/081dc4/8699651985/il_794xN.8699651985_3073.jpg">
+<link rel="icon" href="https://i.etsystatic.com/isc/4b516b/1411091600330/isc_90x90.1411091600330_mvsm.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b0a0c; --ink-2:#141215; --ink-3:#1d1a1e;
+  --pearl:#f3ede4; --mist:#b9b0a6; --smoke:#7d756d;
+  --gold:#c9a96e; --gold-lt:#e6cf9c; --rose:#c99a92;
+  --line:rgba(201,169,110,.22);
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--pearl);font-family:var(--sans);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1200px,92vw);margin:0 auto}
+.eyebrow{font:500 .72rem/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.005em}
+h2{font-size:clamp(2.2rem,4.6vw,3.6rem)}
+h2 em,h1 em{font-style:italic;color:var(--gold-lt)}
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:1em 1.9em;font:500 .78rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--gold);color:var(--ink);background:var(--gold);transition:.3s}
+.btn:hover{background:var(--gold-lt);border-color:var(--gold-lt)}
+.btn.ghost{background:transparent;color:var(--gold-lt)}
+.btn.ghost:hover{background:rgba(201,169,110,.1)}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.solid{background:rgba(11,10,12,.9);backdrop-filter:blur(12px);border-color:var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:.8rem}
+.brand img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:18% 12%;transform:scale(1);border:1px solid var(--line)}
+.brand span{font-family:var(--serif);font-size:1.45rem;letter-spacing:.04em}
+.links{display:flex;gap:2.2rem;align-items:center}
+.links a{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mist);transition:color .2s}
+.links a:hover{color:var(--gold-lt)}
+.links .btn{color:var(--ink);padding:.85em 1.4em}
+.menu{display:none;background:none;border:0;color:var(--pearl);font-size:1.6rem;cursor:pointer}
+
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;position:relative;overflow:hidden}
+.hero-copy{padding:8rem 0 4rem max(4vw,calc((100vw - 1200px)/2))}
+.hero h1{font-size:clamp(3rem,7vw,6.2rem);margin:1.4rem 0 1.6rem}
+.hero p{max-width:30rem;color:var(--mist);font-size:1.08rem;margin-bottom:2.4rem}
+.hero .ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-img{height:100vh;position:relative}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero-img::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,transparent 28%),linear-gradient(0deg,var(--ink) 0%,transparent 20%);z-index:1}
+.hero-tag{position:absolute;right:2.2rem;bottom:2.2rem;z-index:2;text-align:right;font-family:var(--serif);font-style:italic;color:var(--mist);font-size:1rem}
+.hero-tag b{display:block;font-style:normal;color:var(--gold-lt);font-weight:500;font-size:1.15rem}
+
+/* pillars */
+.pillars{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2)}
+.pillars .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.pillars div{padding:1.6rem 1rem;text-align:center;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mist)}
+.pillars div+div{border-left:1px solid var(--line)}
+.pillars b{display:block;font:italic 400 1.5rem/1.2 var(--serif);letter-spacing:0;text-transform:none;color:var(--gold-lt);margin-bottom:.3rem}
+
+section{padding:clamp(5rem,10vw,8.5rem) 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:3.4rem;flex-wrap:wrap}
+.head p{max-width:28rem;color:var(--mist)}
+.head .eyebrow{display:block;margin-bottom:1rem}
+
+/* featured */
+.feature{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:1.4rem}
+.feature a{position:relative;overflow:hidden;background:#000;aspect-ratio:3/4}
+.feature a:first-child{grid-row:span 2;aspect-ratio:auto}
+.feature img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.feature a:hover img{transform:scale(1.05)}
+.feature .cap{position:absolute;inset:auto 0 0;padding:2.4rem 1.4rem 1.3rem;background:linear-gradient(0deg,rgba(0,0,0,.88),transparent)}
+.cap h3{font-size:1.45rem}
+.cap span{font-size:.8rem;letter-spacing:.16em;color:var(--gold)}
+.feature a:first-child .cap h3{font-size:2rem}
+
+/* collection */
+#collection{background:var(--ink-2)}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap}
+.filters button{background:none;border:1px solid var(--line);color:var(--mist);padding:.7em 1.3em;font:400 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:.25s}
+.filters button:hover{color:var(--pearl);border-color:var(--gold)}
+.filters button.on{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:2.4rem 1.6rem}
+.card{display:block}
+.card .ph{aspect-ratio:1;overflow:hidden;background:#000;margin-bottom:1rem}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1),opacity .6s;opacity:0}
+.card img.in{opacity:1}
+.card:hover img{transform:scale(1.06)}
+.card h3{font-size:1.25rem;line-height:1.25;margin-bottom:.35rem}
+.card .row{display:flex;justify-content:space-between;font-size:.82rem;color:var(--smoke);letter-spacing:.06em}
+.card .row b{font-weight:400;color:var(--gold-lt)}
+.card .row i{font-style:normal;opacity:0;transition:.3s;color:var(--gold)}
+.card:hover .row i{opacity:1}
+.more{text-align:center;margin-top:4rem}
+
+/* craft */
+.craft{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.step{border:1px solid var(--line);padding:2.6rem 2.2rem;background:linear-gradient(180deg,var(--ink-3),var(--ink))}
+.step .n{font:italic 400 3.4rem/1 var(--serif);color:var(--gold);opacity:.6}
+.step h3{font-size:1.7rem;margin:1.2rem 0 .8rem}
+.step p{color:var(--mist);font-size:.96rem}
+
+/* story */
+#story{background:var(--ink-2)}
+.story{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.portrait{position:relative}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:60% 30%}
+.portrait::after{content:"";position:absolute;inset:1.2rem -1.2rem -1.2rem 1.2rem;border:1px solid var(--gold);z-index:-1}
+.story .eyebrow{display:block;margin-bottom:1.2rem}
+.story h2{margin-bottom:1.8rem}
+.story p{color:var(--mist);margin-bottom:1.2rem;font-size:1.04rem}
+.story blockquote{font:italic 400 1.6rem/1.35 var(--serif);color:var(--pearl);border-left:2px solid var(--gold);padding-left:1.4rem;margin:2rem 0}
+.sig{font:italic 500 1.9rem/1 var(--serif);color:var(--gold-lt);margin-top:1.8rem}
+.sig small{display:block;font:400 .72rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--smoke);margin-top:.7rem}
+
+/* reviews */
+.stars{color:var(--gold);letter-spacing:.2em;font-size:1rem}
+.score{display:flex;align-items:center;gap:1.2rem}
+.score b{font:400 3.8rem/1 var(--serif);color:var(--gold-lt)}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.rev{border-top:1px solid var(--line);padding-top:1.6rem}
+.rev p{font:italic 400 1.35rem/1.45 var(--serif);margin:.9rem 0 1.1rem}
+.rev small{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke)}
+.rev small em{display:block;font-style:normal;letter-spacing:.04em;text-transform:none;color:var(--mist);margin-top:.35rem;font-size:.85rem}
+
+/* custom */
+.custom{position:relative;overflow:hidden;text-align:center;padding:clamp(6rem,12vw,10rem) 0}
+.custom .bg{position:absolute;inset:0;background:url("https://i.etsystatic.com/62268545/r/il/b9129e/8835122393/il_794xN.8835122393_mymt.jpg") center/cover;opacity:.28;filter:saturate(1.2)}
+.custom::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(11,10,12,.35),var(--ink) 75%)}
+.custom .wrap{position:relative;z-index:1;max-width:44rem}
+.custom h2{margin:1.2rem 0 1.4rem}
+.custom p{color:var(--mist);font-size:1.08rem;margin-bottom:2.4rem}
+.custom .ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+footer{border-top:1px solid var(--line);padding:3.4rem 0 2.6rem;font-size:.82rem;color:var(--smoke)}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:center}
+footer .brand span{font-size:1.3rem;color:var(--pearl)}
+footer nav{position:static;display:flex;gap:1.8rem;border:0}
+footer nav a{letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;color:var(--mist)}
+footer nav a:hover{color:var(--gold-lt)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 1s,transform 1s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .links{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:1.4rem;padding:2rem;background:rgba(11,10,12,.97);border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .menu{display:block}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-img{height:62vh;order:-1}
+  .hero-img::before{background:linear-gradient(0deg,var(--ink) 0%,transparent 45%)}
+  .hero-copy{padding:0 4vw 4rem;margin-top:-5rem;position:relative;z-index:2}
+  .hero-tag{display:none}
+  .pillars .wrap{grid-template-columns:repeat(2,1fr)}
+  .pillars div:nth-child(3){border-left:0}
+  .pillars div:nth-child(n+3){border-top:1px solid var(--line)}
+  .feature{grid-template-columns:1fr 1fr}
+  .feature a:first-child{grid-column:span 2;grid-row:auto;aspect-ratio:4/5}
+  .craft,.reviews{grid-template-columns:1fr}
+  .story{grid-template-columns:1fr}
+  .portrait{max-width:420px}
+  .grid{grid-template-columns:repeat(2,1fr);gap:1.8rem 1rem}
+  .card h3{font-size:1.08rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand"><img src="https://i.etsystatic.com/isc/4b516b/1411091600330/isc_fullxfull.1411091600330_mvsm.jpg" alt="Twisted Swann Studio logo"><span>Twisted Swann Studio</span></a>
+    <button class="menu" aria-label="Menu" onclick="document.querySelector('.links').classList.toggle('open')">&#9776;</button>
+    <div class="links" onclick="this.classList.remove('open')">
+      <a href="#collection">Collection</a>
+      <a href="#craft">The Craft</a>
+      <a href="#story">Story</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#custom">Custom</a>
+      <a class="btn" href="https://www.etsy.com/shop/TwistedSwannStudio" target="_blank" rel="noopener">Shop on Etsy</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-copy">
+    <span class="eyebrow">Handmade Gemstone Bonsai</span>
+    <h1>A little tree.<br><em>A lot of magic.</em></h1>
+    <p>One-of-a-kind sculptures, twisted by hand from wire and genuine gemstones, each one rooted in a natural stone chosen for its character. No two will ever be alike.</p>
+    <div class="ctas">
+      <a class="btn" href="#collection">View the Collection</a>
+      <a class="btn ghost" href="#custom">Commission a Piece</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="https://i.etsystatic.com/62268545/r/il/081dc4/8699651985/il_794xN.8699651985_3073.jpg" alt="Black opal and Herkimer diamond gemstone bonsai on sparkling sphalerite">
+    <div class="hero-tag"><b>Black Opal &amp; Herkimer Diamond</b>on sparkling sphalerite</div>
+  </div>
+</header>
+
+<div class="pillars">
+  <div class="wrap">
+    <div><b>Hand twisted</b>Every branch</div>
+    <div><b>Genuine</b>Gemstones &amp; pearls</div>
+    <div><b>Natural</b>Stone bases</div>
+    <div><b>One of a kind</b>Never repeated</div>
+  </div>
+</div>
+
+<section id="featured">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="eyebrow">Statement Pieces</span><h2>Where the stone<br><em>meets the sparkle</em></h2></div>
+      <p>Each base is selected first. Geode, quartz, pyrite, labradorite, slag glass. The tree is then shaped to answer it, branch by branch.</p>
+    </div>
+    <div class="feature reveal" id="feature"></div>
+  </div>
+</section>
+
+<section id="collection">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="eyebrow">The Collection</span><h2>Find the one that<br><em>speaks to you</em></h2></div>
+      <div class="filters" id="filters">
+        <button class="on" data-f="all">All</button>
+        <button data-f="statement">Statement</button>
+        <button data-f="signature">Signature</button>
+        <button data-f="mini">Miniatures</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="more"><a class="btn ghost" href="https://www.etsy.com/shop/TwistedSwannStudio" target="_blank" rel="noopener">See every piece on Etsy &rarr;</a></div>
+  </div>
+</section>
+
+<section id="craft">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="eyebrow">The Craft</span><h2>Three elements.<br><em>One living sculpture.</em></h2></div>
+      <p>Photographs capture the shape. In person, the stones catch the light from every angle and the trees seem to glow.</p>
+    </div>
+    <div class="craft">
+      <div class="step reveal"><div class="n">i</div><h3>The Stone</h3><p>Every piece begins with a natural base: an amethyst geode, a hand-dug quartz cluster, a slab of pyrite, labradorite, celestite or blue slag glass. The stone sets the mood.</p></div>
+      <div class="step reveal"><div class="n">ii</div><h3>The Tree</h3><p>Trunk, roots and branches are twisted entirely by hand from fine wire, then shaped in the traditions of real bonsai: upright, windswept, cascading, willow.</p></div>
+      <div class="step reveal"><div class="n">iii</div><h3>The Gems</h3><p>Genuine gemstones become the foliage. Herkimer diamonds, garnet, ruby, sapphire, opal, peridot, aquamarine, freshwater pearls. Chosen to sparkle, placed one at a time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap story">
+    <div class="portrait reveal"><img src="https://i.etsystatic.com/62268545/r/isla/128b7f/87734792/isla_fullxfull.87734792_fbjhjp7q.jpg" alt="Jamie Swann-Stojetz, artist and founder of Twisted Swann Studio"></div>
+    <div class="reveal">
+      <span class="eyebrow">Meet the Maker</span>
+      <h2>Turning a love of bonsai<br>and sparkling stones <em>into art</em></h2>
+      <p>I have always felt most at peace in nature. Plants and trees bring me a sense of calm and joy, which led me to the beautiful art of bonsai. I fell in love with growing and shaping miniature trees, from tropical varieties to outdoor bonsai.</p>
+      <p>Wanting to share that joy in my own way, I combined it with my lifelong attraction to gemstones, sparkling crystals and beautiful natural rocks. That inspiration became Twisted Swann Studio.</p>
+      <blockquote>Every tree has its own personality, movement and sparkle. Bring a little bougie home.</blockquote>
+      <div class="sig">Jamie Swann-Stojetz<small>Owner &middot; Designer &middot; Maker</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="eyebrow">Collector Reviews</span><h2>Even better<br><em>in person</em></h2></div>
+      <div class="score"><b>5.0</b><div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><small style="color:var(--smoke);letter-spacing:.14em;text-transform:uppercase;font-size:.72rem">Every review, five stars</small></div></div>
+    </div>
+    <div class="reviews">
+      <div class="rev reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;Absolutely beautiful piece. I do not have adequate words for how lovely it is.&rdquo;</p><small>Carrie<em>Large Cascading Chakra Tree on Natural Wood</em></small></div>
+      <div class="rev reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;This ruby and garnet bonsai is absolutely gorgeous and exceeded my expectations!&rdquo;</p><small>Verified Etsy buyer<em>Ruby &amp; Garnet Bonsai on Hand-Dug Quartz</em></small></div>
+      <div class="rev reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;Even better than pictured! Arrived quickly and was packaged well.&rdquo;</p><small>Jeff<em>Emerald, Jade &amp; Quartz Bonsai</em></small></div>
+      <div class="rev reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;Absolutely gorgeous! High quality piece!&rdquo;</p><small>Heather<em>Yin Yang Gemstone Bonsai</em></small></div>
+      <div class="rev reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;It is well crafted and beautiful work.&rdquo;</p><small>Hailey<em>Black Opal &amp; Freshwater Pearl Bonsai</em></small></div>
+      <div class="rev reveal"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;The tree arrived perfect. Tree is beautiful and my wife loves it.&rdquo;</p><small>G.<em>Freshwater Pearl Windswept Bonsai</em></small></div>
+    </div>
+  </div>
+</section>
+
+<section id="custom" class="custom">
+  <div class="bg"></div>
+  <div class="wrap reveal">
+    <span class="eyebrow">Custom Commissions</span>
+    <h2>A tree made<br><em>only for you</em></h2>
+    <p>A birthstone for an anniversary. Colors for a room. A stone that means something to you. Jamie welcomes custom creations. Send a message with your idea and she will shape a one-of-a-kind piece around it.</p>
+    <div class="ctas">
+      <a class="btn" href="https://www.etsy.com/shop/TwistedSwannStudio#about" target="_blank" rel="noopener">Message on Etsy</a>
+      <a class="btn ghost" href="https://www.instagram.com/twistedswannstudio/" target="_blank" rel="noopener">DM on Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="brand"><img src="https://i.etsystatic.com/isc/4b516b/1411091600330/isc_fullxfull.1411091600330_mvsm.jpg" alt=""><span>Twisted Swann Studio</span></a>
+    <nav>
+      <a href="https://www.etsy.com/shop/TwistedSwannStudio" target="_blank" rel="noopener">Etsy</a>
+      <a href="https://www.instagram.com/twistedswannstudio/" target="_blank" rel="noopener">Instagram</a>
+      <a href="#custom">Custom</a>
+    </nav>
+    <div>&copy; <span id="yr">2026</span> Twisted Swann Studio LLC. Handmade with love.</div>
+  </div>
+</footer>
+
+<script>
+// Listing id, title, price, Etsy image path (hash/number_suffix)
+const P=[
+["4592162771","Black Opal & Herkimer Diamond on Sphalerite",449,"081dc4/8699651985_3073"],
+["4608584003","Multicolor Freshwater Pearl on Natural Geode",359,"b9129e/8835122393_mymt"],
+["4521959800","Gothic Cascading Bonsai",329,"82dfb4/8348088957_amua"],
+["4459163474","Gemstone Chakra Bonsai",299,"33e1c7/8485887990_hopx"],
+["4497985240","Cascading Chakra Tree on Natural Wood",299,"e1f71d/8534144573_5l1r"],
+["4459174696","Aquamarine, Blue Topaz & Blue Calcite on Quartz",289,"e964f3/8348094079_r7wc"],
+["4436224175","Topaz & Herkimer Cascade on Blue Slag Glass",289,"1ada42/8526427657_1hg3"],
+["4597614157","Garnet, Ruby & Smoky Topaz on Hand-Dug Quartz",279,"2c2226/8743696601_78ya"],
+["4414421259","Peridot & Blue Topaz “Water” Bonsai",259,"f5ad47/8396255022_cns7"],
+["4530067871","Moody Garnet & Pearl Bonsai",229,"47806a/8396272512_57u4"],
+["4500585561","Herkimer Diamond & Freshwater Pearl",229,"242ab8/7991478082_mq0d"],
+["4392687213","Pearl & Pink Sapphire on Natural Geode",229,"232ff2/8739017945_f8p3"],
+["4569231574","Rose Quartz Bonsai Tree",219,"fdc81c/8485923468_pw1l"],
+["4508660471","Sparkling Gemstone Bonsai",219,"9de9a5/8493624953_47mu"],
+["4414414085","Gemstone Bonsai on Glass Slag",209,"900549/8444145865_f8p3"],
+["4464670752","Fluorite, Agate & Herkimer on Apophyllite",199,"436ddf/8444153029_22wm"],
+["4401918009","Onyx & Spinel Yin Yang on White Base",199,"78d706/8486089022_tiz7"],
+["4414434071","Herkimer, Citrine & Smoky Topaz on Quartz",199,"7741f4/8486167448_q1n3"],
+["4533609643","Black Zircon & Herkimer Diamond",189,"122034/8651946866_evgn"],
+["4457823388","Herkimer, White Topaz & Quartz on Geode",189,"22b951/8396247524_rduc"],
+["4485450258","Cascading Chakra Bonsai on Andesite",189,"696da3/8485884342_jq2o"],
+["4485445974","Labradorite on a Labradorite Base",189,"28de02/7892313286_mmc0"],
+["4414441336","Obsidian, Hematite & Pyrite on Pyrite",189,"8eb7cf/8396274082_6rtg"],
+["4530067626","Sapphire, Pyrite & Hematite on Quartz",179,"4fd3c4/8493615049_bhx9"],
+["4392698312","Peridot, Herkimer Diamond & Apatite",179,"b26d5b/8742422583_4i95"],
+["4459179388","Hematite, Agate & Titanium on Carborundum",179,"060678/8396263354_d0fi"],
+["4514292070","Sparkling Chakra Bonsai on Pyrite",179,"5f8889/8444164197_n91u"],
+["4433244445","Rainbow Pyrite & Hematite on Druzy Sphalerite",179,"93301c/8486053002_7jdp"],
+["4447161733","Amethyst Geode Bonsai",169,"66ba4d/8493612027_df3p"],
+["4433271979","Yin Yang Gemstone Bonsai",169,"31d005/8651951778_ricm"],
+["4447154757","Labradorite on Blue Calcite",160,"30055b/8396269674_2ake"],
+["4433296910","Windswept Yin Yang Bonsai",159,"c85215/8396283498_fjq3"],
+["4433280167","Yin Yang Willow Bonsai",149,"60cb3d/8444173201_rwcv"],
+["4436277960","Miniature Pearl Bonsai",60,"add1c2/7679108899_efl3"],
+["4457816700","Miniature White Topaz & Herkimer",55,"a82b5d/7758175969_riiy"],
+["4447175365","Mini Blue Calcite on Celestite",49,"8713b6/8534090305_o96w"]
+];
+const img=p=>{const[h,ns]=p.split("/");const n=ns.split("_")[0];return`https://i.etsystatic.com/62268545/r/il/${h}/${n}/il_794xN.${ns}.jpg`};
+const url=id=>`https://www.etsy.com/listing/${id}`;
+const tier=pr=>pr>=250?"statement":pr<100?"mini":"signature";
+const esc=s=>s.replace(/&/g,"&amp;");
+
+// featured: hero piece excluded, next five
+document.getElementById("feature").innerHTML=[1,2,5,7,3].map(i=>{const[id,t,pr,p]=P[i];
+  return`<a href="${url(id)}" target="_blank" rel="noopener"><img src="${img(p)}" alt="${esc(t)}" loading="lazy"><div class="cap"><h3>${esc(t)}</h3><span>$${pr}</span></div></a>`}).join("");
+
+const grid=document.getElementById("grid");
+function render(f){
+  grid.innerHTML=P.filter(x=>f==="all"||tier(x[2])===f).map(([id,t,pr,p])=>
+   `<a class="card" href="${url(id)}" target="_blank" rel="noopener"><div class="ph"><img src="${img(p)}" alt="${esc(t)} handmade gemstone bonsai" loading="lazy" onload="this.classList.add('in')"></div><h3>${esc(t)}</h3><div class="row"><b>$${pr}</b><i>View on Etsy &rarr;</i></div></a>`).join("");
+}
+render("all");
+document.getElementById("filters").onclick=e=>{const b=e.target.closest("button");if(!b)return;
+  document.querySelectorAll("#filters button").forEach(x=>x.classList.toggle("on",x===b));render(b.dataset.f)};
+
+const nav=document.getElementById("nav");
+const onScroll=()=>nav.classList.toggle("solid",scrollY>40);addEventListener("scroll",onScroll,{passive:true});onScroll();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
